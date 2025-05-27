@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const slice = createSlice({
   name: 'contacts',
   initialState: {
-    items: JSON.parse(localStorage.getItem('contacts')).items || [],
+    items: JSON.parse(localStorage.getItem('contacts'))?.items || [],
   },
   reducers: {
     addContact: (state, action) => {
